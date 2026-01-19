@@ -1,0 +1,105 @@
+/* Variables CSS3 (novedad: custom properties para temas reutilizables) */
+:root {
+    --color-primario: #007bff;
+    --color-fondo: #f8f9fa;
+    --espaciado: 1rem;
+    --transicion: all 0.3s ease;
+}
+
+/* Buenas prácticas: Reset básico y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+    padding: var(--espaciado);
+}
+
+/* Header con flexbox (novedad CSS3) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario);
+    color: white;
+    padding: var(--espaciado);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: var(--espaciado);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main con CSS Grid (novedad: layouts grid para responsividad) */
+main {
+    display: grid;
+    grid-template-columns: 1fr 200px; /* Columna principal + aside */
+    gap: var(--espaciado);
+    margin-top: var(--espaciado);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo: se adapta automáticamente */
+    gap: var(--espaciado);
+}
+
+article {
+    background-color: white;
+    padding: var(--espaciado);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Animaciones y transiciones CSS3 */
+.btn-animado {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.btn-animado:hover {
+    transform: scale(1.05);
+    background-color: darken(var(--color-primario), 10%); /* Novedad: funciones como darken, pero usa #0056b3 para compatibilidad */
+}
+
+/* Media queries para responsivo (novedad CSS3) */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Apila en mobile */
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: var(--espaciado);
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: var(--espaciado);
+    padding: var(--espaciado);
+    background-color: var(--color-primario);
+    color: white;
+}

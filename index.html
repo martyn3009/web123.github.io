@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo HTML5 y CSS3 - Blog Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:powderblue;">
+    <header>
+        <h1>Mi Blog Personal</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Este es un ejemplo para aprender HTML5 y CSS3 con buenas prácticas.</p>
+            <picture>
+                <source media="(min-width: 768px)" srcset="https://iplideres.com/web/image/155220-8c623118/U.webp?access_token=4202a0fb-ea7d-4446-a59d-20e1631c3458">
+                <img src="https://iplideres.com/web/image/155220-8c623118/U.webp?access_token=4202a0fb-ea7d-4446-a59d-20e1631c3458" alt="IPL" loading="lazy">
+            </picture>
+        </section>
+
+        <section id="articulos" class="grid-container">
+            <article>
+                <h3>Artículo 1: Novedades en CSS Grid</h3>
+                <p>CSS Grid permite layouts bidimensionales flexibles. Buena práctica: Usa grid para estructuras complejas en lugar de floats.</p>
+                <button class="btn-animado">Leer más</button>
+            </article>
+            <article>
+                <h3>Artículo 2: Animaciones CSS3</h3>
+                <p>Las animaciones mejoran la UX sin JavaScript. Usa transiciones para efectos suaves.</p>
+                <button class="btn-animado">Leer más</button>
+            </article>
+            <article>
+                <h3>Artículo 3: Accesibilidad en HTML5</h3>
+                <p>Siempre incluye alt en imágenes y ARIA para elementos interactivos.</p>
+                <button class="btn-animado">Leer más</button>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Enlaces Útiles</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">MDN HTML5</a></li>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN CSS3</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Creado con HTML5 y CSS3. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
